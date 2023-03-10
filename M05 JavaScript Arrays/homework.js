@@ -137,7 +137,7 @@ function diaDeLaSemana(numeroDeDia) {
    if(numeroDeDia === 1 || numeroDeDia === 7){
       return "Es fin de semana";
    }else if(numeroDeDia >= 2){
-      return "Es día laboral";
+      return "Es dia laboral";
    }
 }
 
@@ -174,18 +174,40 @@ function mesesDelAño(array) {
    // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
+   var newArray = [];
+  for (let index = 0; index < array.length; index++) {
+      if(array[index] === "Enero" || array[index] === "Marzo" || array[index] === "Noviembre"){
+         newArray.push(array[index]);
+      }
+   }
+   if(newArray.includes("Enero") && newArray.includes("Marzo") && newArray.includes("Noviembre")){
+      return newArray;
+   }else {return "No se encontraron los meses pedidos";}
 }
 
 function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
    // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
    // Tu código:
+   var limite = 60;
+   var resultado = 0;
+   var multiplicador = 0;
+   var newArray = [];
+   while(resultado < limite){
+      resultado = 6 * multiplicador;
+      console.log("6 * " + multiplicador + " = " + resultado);
+      newArray.push(resultado);
+      multiplicador++;
+  }
+  return newArray;
 }
 
 function mayorACien(array) {
    // La función recibe un arreglo con enteros entre 0 y 200.
    // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
    // Tu código:
+      var newArray = array.map((element) => {if(element > 100){return element}});
+      return newArray;
 }
 
 /* ----------------------------------------------------------------------------------
