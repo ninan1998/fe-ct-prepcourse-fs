@@ -206,7 +206,7 @@ function mayorACien(array) {
    // La función recibe un arreglo con enteros entre 0 y 200.
    // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
    // Tu código:
-      var newArray = array.map((element) => {if(element > 100){return element}});
+      var newArray = array.filter(element => element > 100);
       return newArray;
 }
 
@@ -221,6 +221,7 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
+   
 }
 
 function continueStatement(num) {
